@@ -23,7 +23,6 @@ public class UserRepositoryImpl implements UserRepository {
         return UserConverter.toUser(userEntity);
     }
 
-
     @Override
     public User getById(long id) {
         return findById(id).orElseThrow(() -> new ResourceNotFoundException("User", id));

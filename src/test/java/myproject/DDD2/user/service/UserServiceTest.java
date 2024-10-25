@@ -34,6 +34,7 @@ class UserServiceTest {
                 .email("test1@naver.com")
                 .userStatus(UserStatus.PRIVATE)
                 .build();
+
         User user2 = User.builder()
                 .userId(2L)
                 .loginId("test2")
