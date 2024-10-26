@@ -7,3 +7,7 @@ jobs:
     steps:
       - name: step2
         run: echo push event2
+      - name: step3
+        run: | 
+          echo  ellow wordl
+          echo  ellow word2
