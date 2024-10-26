@@ -1,0 +1,10 @@
+# 왜사용할까 더유연한 워크플로우를 만들기 위해
+name: contxet
+on: workflow_dispatch
+
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: github context
+        run: echo '${{ toJSON(github) }}'
