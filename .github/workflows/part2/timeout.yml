@@ -1,0 +1,19 @@
+name: timout
+on: push
+
+jobs:
+  timeout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: loop
+        run: |
+          count = 0
+          while true; do
+            echo "seconds: $count"
+            count=$((count+1))
+            sleep 1
+          done
+        #timeout-minutes: 1 만약해당 코드를 작성한다면 첫번째 스탭은 1분안에 종료 되므로 2번째 스탭은 실행됌
+      - name: echo # 첫번째 스탭에서 설정한 타임아웃으로 인해 실행 x
+        run: echo hello
