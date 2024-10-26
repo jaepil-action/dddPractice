@@ -1,6 +1,6 @@
 name: issue-workflow
 on:
-  issues: :
+  issues:
     types: [opened]
 
 jobs:
