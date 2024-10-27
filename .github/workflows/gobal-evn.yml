@@ -1,0 +1,11 @@
+name: env-gobal
+on: push
+
+jobs:
+  get-evn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check env & secrets
+        run:  |
+          echo ${{ vari.level }}
+          echo ${{ abc.key }}
