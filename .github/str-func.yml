@@ -1,0 +1,28 @@
+name: str-func
+on: push
+
+jobs:
+  string-function:
+    runs-on: ubuntu-latest
+    steps:
+      - name: startswith
+        if: startWith('github actions', 'git')
+        run: echo "start"
+      - name: startwithX
+        if: startWith('github actions', 'test')
+        run: echo "startX"
+
+      - name: endswith
+        if: endsWith('github actions', 'actions')
+        run: echo "actions"
+      - name: endswithX
+        if: startWith('github actions', 'test')
+        run: echo "endX"
+
+      - name: contains
+        if: contains('github actions', 'act')
+        run: echo "contains"
+      - name: containsX
+        if: startWith('github, actions', 'git') # 배열 , 구분
+        run: echo "contains"
+

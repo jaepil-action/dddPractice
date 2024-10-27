@@ -7,13 +7,14 @@ jobs:
     steps:
       - name: exit 1
         run: exit 1
-      - name: echo
+      - name: echo2
+        if: always() #exit1 스텝이 실패하더라도 echo2 스텝 실행
         run: echo hello
 
   job2:
     needs: [job1]
     runs-on: ubuntu-latest
-    if: always()
+    if: always() # job1 이 종료되도 강제로 실행 (없다면 실행X)
     steps:
       - name: echo
         run: echo hello
