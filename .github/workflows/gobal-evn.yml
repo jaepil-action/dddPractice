@@ -7,5 +7,14 @@ jobs:
     steps:
       - name: check env & secrets
         run:  |
-          echo ${{ vars.vari }}
+          echo ${{ vars.vari }} 
           echo ${{ secrets.abc }}
+
+  get-env-dev:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: dev env
+        run: |
+          echo ${{ secrets.sekey }}
+          echo ${{ vars.vakey }}
