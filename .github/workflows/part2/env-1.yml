@@ -1,6 +1,6 @@
 name: var-1
 on: push
-
+# env 우선순위 : workflow -> job -> step
 env:
   level: workflow
 
