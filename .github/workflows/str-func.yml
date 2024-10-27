@@ -17,7 +17,7 @@ jobs:
         if: endsWith('github actions', 'actions')
         run: echo "actions"
       - name: endswithX
-        if: startWith('github actions', 'test')
+        if: endsWith('github actions', 'test')
         run: echo "endX"
 
       - name: contains
