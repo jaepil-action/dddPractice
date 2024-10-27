@@ -1,7 +1,7 @@
 name: env-gobal
 on: push
 
-jobs:
+jobs: # 우선순위 레포가 더높다 (org보다)
   get-evn:
     runs-on: ubuntu-latest
     steps:
@@ -10,7 +10,7 @@ jobs:
           echo ${{ vars.vari }} 
           echo ${{ secrets.abc }}
 
-  get-env-dev:
+  get-env-dev: #레포 내에 환경(공간) 을 따로만들어서 거기서 또 지정가능
     runs-on: ubuntu-latest
     environment: dev
     steps:
