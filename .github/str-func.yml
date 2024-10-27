@@ -1,6 +1,7 @@
 name: str-func
 on: push
 
+
 jobs:
   string-function:
     runs-on: ubuntu-latest
