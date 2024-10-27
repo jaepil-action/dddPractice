@@ -24,6 +24,6 @@ jobs:
         if: contains('github actions', 'act')
         run: echo "contains"
       - name: containsX
-        if: startWith('github, actions', 'git') # 배열 , 구분
+        if: contains('github, actions', 'git') # 배열 , 구분
         run: echo "contains"
 
